@@ -52,4 +52,3 @@ This project is a work in progress. It utilizes the Pokémon API along with Axio
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
