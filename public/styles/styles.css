@@ -1,0 +1,75 @@
+/* Main Styles */
+
+
+body {
+    font-family: 'Trispace', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('pokemon_background.jpg'); /* Assuming you have a Pokemon-themed background image */
+    background-size: cover;
+    background-color: #4DBAFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 8px;
+    font-size: 16px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Card Styles */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #4DBAFF;
+}
+
+img {
+    width: 180px; /* Adjust the width as needed */
+    height: 180px; /* Adjust the height as needed */
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+
+/* Error Tag Styles */
+.tag-error {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    margin-top: 10px;
+}
+

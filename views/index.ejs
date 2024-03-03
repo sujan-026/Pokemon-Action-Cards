@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <title>Pokemon Viewer</title>
+</head>
+
+<body>
+
+    <%- include('partials/header.ejs') %>
+
+    <div class="container">
+        <form action="/" method="POST">
+            <select name="type" id="">
+                <option value="" data-display="Select">Select Pokemon</option>
+                <option value="bulbasaur">Bulbasaur</option>
+                <option value="charmander">Charmander</option>
+                <option value="ivysaur">Ivysaur</option>
+                <option value="venusaur">Venusaur</option>
+                <option value="charmeleon">Charmeleon</option>
+                <option value="charizard">Charizard</option>
+                <!-- <option value="charizard-mega-x">Charizard-mega-x</option> -->
+                <option value="squirtle">Squirtle</option>
+                <option value="wartortle">Wartortle</option>
+                <option value="blastoise">Blastoise</option>
+                <option value="caterpie">Caterpie</option>
+                <option value="metapod">Metapod</option>
+                <option value="butterfree">Butterfree</option>
+                <option value="raticate">Raticate</option>
+                <option value="pikachu">Pikachu</option>
+            </select>
+
+            <button type="submit" class="form-submit">Go</button>
+        </form>
+        <section id="cards" class="cards">
+
+            <% if(locals.data) { %>
+
+                <h2>
+                    The pokemon you choose is: <%= data.name %>
+                </h2>
+
+                <% if (locals.data.sprites) { %>
+                    <img src="<%= data.sprites.front_default %>" alt="" class="card">
+                    
+                <% } %>
+                
+                <% if(locals.data.species) { %>
+
+                <ul>
+                    <li>Height: <%= data.height %></li>
+                    <li>Weight: <%= data.weight %></li>
+                    <li>Color: <%= species.data.color.name %></li>
+                    <li>Group name: <%= species.data.egg_groups[0].name %></li>
+                    <!-- <li><%# species.data.egg_groups[1].name %></li> -->
+                    <!-- <li>Favorite Phrase:<%# species.data.flavor_text_entries[0].flavor_text %></li> -->
+                    <li>Habitat: <%= species.data.habitat.name %></li>
+                    <li>Legendary: <%= species.data.is_legendary %></li>
+                    <li>Mythical: <%= species.data.is_mythical %></li>
+                    <li>Shape: <%= species.data.shape.name %></li>
+                    <!-- <li><%# species.data.varieties[1].pokemon.name %></li> -->
+                <% } %>
+                    
+                </ul>
+
+                
+
+                <% if (locals.data.species) { %>
+                    
+                <% } %>
+                
+            <% } else { %>
+                <h2>Select your favorite Pokemon</h2>
+            <% } %>
+
+
+            <% if (locals.error) { %>
+                <div id="tag-error" class="tag-error">
+                    <!-- Show any errors that were sent from the backend -->
+                    <%= error %>
+                </div>
+
+            <% } %>
+        </section>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+    
+</body>
+
+</html>

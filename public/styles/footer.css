@@ -1,0 +1,16 @@
+/* Footer Styles */
+
+footer {
+    background-color: #FFCB05;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px;
+}

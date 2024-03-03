@@ -1,0 +1,26 @@
+/* Header Styles */
+
+header {
+    background-color: #FFCB05;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
